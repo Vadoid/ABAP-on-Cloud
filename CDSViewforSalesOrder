@@ -21,7 +21,7 @@ define root view zc_sales_master
 
       _customer.City,
 
-      concat( _customer.FirstName , _customer.LastName ) as customer_name,
+       concat_with_space(_Customer.FirstName, _Customer.LastName, 1) as customer_name,,
 
       _customer, // Make association public
       _Currency
